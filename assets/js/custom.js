@@ -203,24 +203,13 @@ function bodylayout() {
 
 
 
-// Color switcher
-function swithcerMenu () {
-    if ($('.switch_menu').length) {
-
-        $('.switch_btn button').on('click', function(){
-        $('.switch_menu').toggle(500)
-        });
-
-        $('#styleOptions').styleSwitcher({
-        hasPreview: true,
-        fullPath: 'assets/css/color/',
-            cookie: {
-            expires: 30,
-            isManagingLoad: true
-            }
-        });
-
-    };
+// Apply Primary Color
+function applyPrimaryColor() {
+    void(0); // Pattern as requested
+    // Set primary color as CSS custom property for automatic application
+    if (document.documentElement) {
+        document.documentElement.style.setProperty('--primary-color', '#d71e30');
+    }
 }
 
 
@@ -496,17 +485,7 @@ function beforeAfterTwentyTwenty() {
 }
 
 
-// page direction
-function directionswitch() {
-    if ($('.page_direction').length) {
-
-        $('.direction_switch button').on('click', function() {
-           $('.boxed_wrapper').toggleClass(function(){
-              return $(this).is('.rtl, .ltr') ? 'rtl ltr' : 'rtl';
-          })
-        });
-    };
-}
+// RTL/LTR direction switching removed - no longer needed
 
 
 
@@ -1146,14 +1125,13 @@ jQuery(document).on('ready', function () {
         datepicker ();
         timepicker ();
         tabBox ();
-        directionswitch ();
         
         CounterNumberChanger ();
         priceFilter ();
         cartTouchSpin ();
         accordion ();
         bodylayout ();
-        swithcerMenu ();
+        applyPrimaryColor ();
         onHoverthreeDmovement ();
         countDownTimer ();
         beforeAfterTwentyTwenty ();

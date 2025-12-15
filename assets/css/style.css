@@ -1504,7 +1504,7 @@ select:focus {
     position: relative;
     display: block;
     background: #333029;
-    padding: 32px 0 33px;
+    padding: 15px 0;
 }
 .header-top .outer-box{
     position: relative;
@@ -1512,23 +1512,36 @@ select:focus {
 }
 .header-top-left {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .header-top-left .logo {
     position: relative;
-    display: block;
+    display: flex;
     float: left;
     padding: 3px 0 4px;
+    align-items: center;
+    height: 100%;
 }
 .header-top-left .logo a{
     position: relative;
     display: inline-block;
+    line-height: 0;
+}
+.header-top-left .logo img {
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 
 .header-top-right{
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .header-contact-info{
     position: relative;
@@ -1545,6 +1558,8 @@ select:focus {
     padding-right: 41px;
     margin-right: 40px;
     min-height: 45px;
+    display: flex;
+    align-items: center;
 }
 .header-contact-info ul li:before{
     position: absolute;

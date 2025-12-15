@@ -25,6 +25,8 @@
 .single-featured-style1 .img-holder img{
     position: relative;
     width: 100%;
+    height: auto;
+    display: block;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;    
