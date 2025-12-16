@@ -1483,11 +1483,18 @@ select:focus {
 .sticky-header .logo {
     position: relative;
     display: block;
-    padding: 21px 0 21px;
+    padding: 15px 0;
 }
 .sticky-header .logo a{
     position: relative;
     display: inline-block;
+    line-height: 0;
+}
+.sticky-header .logo img {
+    max-height: 45px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 .sticky-header .main-menu .navigation> li {}
 .sticky-header .main-menu .navigation> li> a {
@@ -2694,7 +2701,7 @@ select:focus {
 .footer{
     position: relative;
     display: block;
-    padding: 100px 0 90px;
+    padding: 100px 0 50px;
 }
 .single-footer-widget {
     position: relative;
@@ -2947,7 +2954,7 @@ select:focus {
     display: block;
     background: #23211b;
     border-top: 1px solid rgba(255, 255, 255, 0.20);
-    padding: 42px 0;
+    padding: 25px 0;
 }
 .footer-bottom .outer-box {
     position: relative;

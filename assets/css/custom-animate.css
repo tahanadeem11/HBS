@@ -546,7 +546,7 @@
     Animation2 Css
 =============================================
 ***/
-animation2{0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}@-moz-keyframes animation2{0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-moz-transform:rotateY(360deg);transform:rotateY(360deg)}}@-o-keyframes animation2{0%{-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-o-transform:rotateY(360deg);transform:rotateY(360deg)}}@keyframes animation2{0%{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);transform:rotateY(360deg)}}
+@-webkit-keyframes animation2{0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}@-moz-keyframes animation2{0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-moz-transform:rotateY(360deg);transform:rotateY(360deg)}}@-o-keyframes animation2{0%{-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-o-transform:rotateY(360deg);transform:rotateY(360deg)}}@keyframes animation2{0%{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);transform:rotateY(360deg)}}
 
 
 
@@ -886,7 +886,7 @@ animation2{0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webk
 
 
 
-service_hexagon_2{0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}@-moz-keyframes service_hexagon_2{0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-moz-transform:rotateY(360deg);transform:rotateY(360deg)}}@-o-keyframes service_hexagon_2{0%{-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-o-transform:rotateY(360deg);transform:rotateY(360deg)}}@keyframes service_hexagon_2{0%{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);transform:rotateY(360deg)}}
+@-webkit-keyframes service_hexagon_2{0%{-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}}@-moz-keyframes service_hexagon_2{0%{-moz-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-moz-transform:rotateY(360deg);transform:rotateY(360deg)}}@-o-keyframes service_hexagon_2{0%{-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-o-transform:rotateY(360deg);transform:rotateY(360deg)}}@keyframes service_hexagon_2{0%{-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-o-transform:rotateY(0deg);transform:rotateY(0deg)}100%{-webkit-transform:rotateY(360deg);-moz-transform:rotateY(360deg);-o-transform:rotateY(360deg);transform:rotateY(360deg)}}
 
 
 
