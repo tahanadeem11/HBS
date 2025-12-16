@@ -2393,6 +2393,67 @@ select:focus {
     margin: 0;
 }
 
+/* Redesigned Tab Content Styles */
+.redesigned-tab-content {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.tab-image-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.tab-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+.tab-image-box:hover img {
+    transform: scale(1.05);
+}
+.tab-description-box {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.tab-description-box h3 {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.tab-description-box p {
+    color: #a4a097;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .tab-image-box {
+        margin-bottom: 20px;
+    }
+    .tab-description-box h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+    .tab-description-box p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
 .team-tab-content{
     position: relative;
     display: block;

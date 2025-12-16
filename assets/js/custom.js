@@ -1169,3 +1169,51 @@ jQuery(window).on('load', function() {
 
 
 $(window).enllax();
+
+// Hero Image Gallery Scroll Animation
+function heroImageGalleryScroll() {
+    // Handle all three image galleries
+    const heroGalleries = [
+        document.getElementById('hero-image-gallery'),
+        document.getElementById('hero-image-gallery-2'),
+        document.getElementById('hero-image-gallery-3')
+    ];
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    heroGalleries.forEach(function(heroGallery) {
+        if (!heroGallery) return;
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) {
+                    // Hero section is out of viewport - fade out and move up
+                    heroGallery.classList.add('scroll-out');
+                } else {
+                    // Hero section is in viewport - fade in
+                    heroGallery.classList.remove('scroll-out');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe the hero section (parent slide)
+        const heroSection = heroGallery.closest('.slide');
+        if (heroSection) {
+            observer.observe(heroSection);
+        }
+    });
+}
+
+// Initialize on DOM ready
+jQuery(document).on('ready', function() {
+    heroImageGalleryScroll();
+});
+
+// Also initialize on window load for better compatibility
+jQuery(window).on('load', function() {
+    heroImageGalleryScroll();
+});
