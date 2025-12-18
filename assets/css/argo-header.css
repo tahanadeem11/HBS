@@ -58,13 +58,13 @@
 }
 
 .argo-social-links li a:hover {
-    color: #000;
+    color: #bf202f;
 }
 
 /* INFO BAR */
 .argo-info-bar {
     background: #fff;
-    border-bottom: 1px solid #eee;
+    border-bottom: none; /* Removed border to prevent gap */
 }
 
 .argo-info-container {
@@ -88,13 +88,13 @@
 .argo-logo::before {
     content: "";
     position: absolute;
-    top: -15px; /* Matches header-upper padding */
-    left: -500px; /* Extends far to the left */
+    top: -16px; /* Slightly more to overlap top bar if needed */
+    left: -500px;
     right: 0;
-    bottom: -15px; /* Matches header-upper padding */
+    bottom: -16px; /* Slightly more to overlap nav bar and remove gap */
     background: #000;
     z-index: 1;
-    clip-path: polygon(0 0, 100% 0, 90% 110%, 0 100%); /* Adjusted polygon for better slant */
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%); 
 }
 
 .argo-logo a {
