@@ -2271,11 +2271,47 @@ select:focus {
 .interior-design-area{
     position: relative;
     display: block;
-    padding: 120px 0 120px;
+    padding: 120px 0 100px;
     background-attachment: fixed;
     background-size: cover;
     background-position: center top;
     z-index: 1;
+}
+
+.border-radius-10 {
+    border-radius: 10px !important;
+}
+
+.hover-scale {
+    transition: transform 0.5s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.right-column-image .img-holder {
+    position: relative;
+    border: 5px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.right-column-image .img-holder:hover {
+    border-color: #bf202f;
+}
+
+.redesigned-tab-content .tab-image-box .img-holder img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.interior-design-right-content ul li {
+    margin-bottom: 30px;
+}
+
+.interior-design-right-content ul li:last-child {
+    margin-bottom: 0;
 }
 .interior-design-area:before{
     position: absolute;
