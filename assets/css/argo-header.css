@@ -1,0 +1,275 @@
+
+/* ARGO STYLE HEADER - Color #bf202f */
+
+.argo-main-header {
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TOP BAR */
+.argo-top-bar {
+    background: #bf202f;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.argo-top-bar::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    background: #000;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.argo-top-bar .argo-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* INFO BAR */
+.argo-info-bar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.argo-info-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 30px;
+}
+
+.argo-logo {
+    position: relative;
+    padding: 10px 80px 10px 0; /* More space on the right */
+    display: flex;
+    align-items: center;
+}
+
+/* Background shape for the logo */
+.argo-logo::before {
+    content: "";
+    position: absolute;
+    top: -15px; /* Matches header-upper padding */
+    left: -500px; /* Extends far to the left */
+    right: 0;
+    bottom: -15px; /* Matches header-upper padding */
+    background: #000;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 90% 110%, 0 100%); /* Adjusted polygon for better slant */
+}
+
+.argo-logo a {
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.argo-logo img {
+    height: 75px; 
+    width: auto;
+    display: block;
+    transition: 0.3s;
+    /* Removed filter to show original red/black logo colors */
+}
+
+.argo-logo a:hover img {
+    transform: scale(1.05);
+}
+
+.argo-info-items {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.argo-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #111;
+    transition: 0.3s;
+}
+
+.argo-info-item:hover .argo-info-icon {
+    background: #000;
+    transform: rotate(360deg);
+}
+
+.argo-info-item:hover strong {
+    color: #bf202f;
+}
+
+.argo-info-icon {
+    width: 45px;
+    height: 45px;
+    background: #bf202f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%; /* Circle */
+    transition: all 0.5s ease;
+    flex-shrink: 0;
+}
+
+.argo-info-icon span {
+    color: #fff !important;
+}
+
+.argo-info-item div strong {
+    display: block;
+    transition: 0.3s;
+}
+
+.argo-info-item span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.argo-info-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.argo-info-item a:hover {
+    color: #bf202f;
+}
+
+/* NAV BAR */
+.argo-nav-bar {
+    background: #000;
+}
+
+.argo-nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.argo-nav-bar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.argo-nav-bar nav ul li {
+    position: relative;
+}
+
+.argo-nav-bar nav ul li a {
+    display: block;
+    padding: 16px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.argo-nav-bar nav ul li a:hover,
+.argo-nav-bar nav ul li:hover > a {
+    background: #222;
+    color: #bf202f;
+}
+
+/* Dropdown Menu */
+.argo-nav-bar nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+.argo-nav-bar nav ul li:hover > ul {
+    display: flex;
+}
+
+.argo-nav-bar nav ul li ul li {
+    width: 100%;
+}
+
+.argo-nav-bar nav ul li ul li a {
+    color: #333;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.argo-nav-bar nav ul li ul li a:hover {
+    background: #bf202f;
+    color: #fff;
+}
+
+.argo-nav-bar nav ul li.argo-dropdown > a::after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    margin-left: 8px;
+}
+
+.argo-cta {
+    background: #bf202f;
+    color: #fff;
+    padding: 16px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.argo-cta:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+    .argo-info-items {
+        display: none;
+    }
+    .argo-nav-bar nav ul {
+        flex-wrap: wrap;
+    }
+    .argo-top-bar::after {
+        width: 0;
+    }
+}
+
+@media(max-width:600px) {
+    .argo-nav-container {
+        flex-direction: column;
+    }
+    .argo-cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
