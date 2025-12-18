@@ -281,6 +281,9 @@
 
 /* RESPONSIVE */
 @media(max-width:900px) {
+    .argo-main-header {
+        display: none !important;
+    }
     .argo-info-items {
         display: none;
     }

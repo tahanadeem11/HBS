@@ -1217,3 +1217,18 @@ jQuery(document).on('ready', function() {
 jQuery(window).on('load', function() {
     heroImageGalleryScroll();
 });
+
+// MOBILE MENU TOGGLE
+(function($) {
+    // Toggle Sidebar
+    $('.argo-mobile-header .mobile-nav-toggler, .mobile-menu-sidebar .close-btn, .mobile-menu-sidebar .menu-backdrop').on('click', function() {
+        $('body').toggleClass('mobile-menu-visible');
+    });
+
+    // Dropdown Toggle in Sidebar
+    $('.mobile-menu-sidebar .navigation li.dropdown > a').on('click', function(e) {
+        e.preventDefault();
+        $(this).parent('li').toggleClass('open');
+        $(this).next('ul').slideToggle(500);
+    });
+})(jQuery);

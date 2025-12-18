@@ -562,44 +562,106 @@
 @media (max-width: 1024px) {
     .main-slider.style1 .slide::before {
         clip-path: none;
-        background: rgba(0, 0, 0, 0.65); /* Darker overlay for better readability on mobile */
+        background: rgba(0, 0, 0, 0.55); /* Darker overlay for better readability on mobile */
     }
     .main-slider.style1 .slide::after {
         display: none;
     }
+    .hero-decorative-elements {
+        display: none !important; /* Hide circles and lines on mobile */
+    }
     .hero-content-wrapper-new {
         flex-direction: column;
-        text-align: center;
-        padding: 80px 20px 40px; /* Adjusted padding */
+        text-align: left; /* Match Golden Space left alignment */
+        padding: 155px 20px 60px; /* Aligned right after mobile header (~155px height) */
+        align-items: flex-start;
     }
     .hero-text-container-new {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
+    }
+    .hero-image-gallery {
+        display: none !important; /* Force hide floating gallery on mobile */
     }
     .description-new {
         max-width: 100%;
-        margin: 0 auto 25px;
+        margin: 0 0 30px;
+        text-align: left;
     }
     .btns-box-new {
-        justify-content: center;
+        justify-content: flex-start;
+        width: 100%;
     }
     .main-heading-large {
-        font-size: 36px; /* Slightly smaller for tablets */
+        font-size: 38px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        text-align: left;
+    }
+    .small-heading-accent {
+        color: #ffc107; /* Yellow like Golden Space accent */
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+        text-align: left;
+        display: block;
+        text-transform: uppercase;
+        border-left: 4px solid #ffc107; /* Added a left border bar for more impact */
+        padding-left: 12px;
     }
 }
 
 @media (max-width: 767px) {
+    .main-slider.style1 .slide {
+        min-height: 70vh !important; /* Reduced to fit content better */
+        max-height: none !important; /* Remove desktop max-height restriction */
+        padding: 0 !important;
+        display: flex;
+        align-items: flex-start !important;
+    }
+    .main-slider .auto-container {
+        align-items: flex-start !important;
+        padding-top: 0 !important;
+        height: auto !important; /* Allow container to shrink-wrap content */
+    }
+    .hero-content-wrapper-new {
+        padding: 20px 20px 40px !important; /* Tight top space right after header */
+        align-items: flex-start !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
     .main-heading-large {
-        font-size: 28px; /* Better fit for mobile */
+        font-size: 38px !important; 
+        line-height: 1.05 !important; /* Very tight for impact */
+        margin-bottom: 20px !important;
+        text-align: left !important;
+        font-weight: 900 !important;
+        letter-spacing: -0.5px;
+    }
+    .small-heading-accent {
+        margin-bottom: 12px !important;
+        font-size: 13px !important;
+    }
+    .description-new p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        text-align: left !important;
+        margin-bottom: 30px !important;
     }
     .btns-box-new {
-        flex-direction: row; /* Keep them side by side if they fit, or stack nicely */
-        justify-content: center;
-        gap: 10px;
+        flex-direction: column;
+        gap: 12px !important;
+        width: 100%;
+        align-items: flex-start !important;
     }
     .btn-read-more, .btn-see-all {
-        padding: 12px 20px;
-        font-size: 13px;
+        width: 100% !important;
+        max-width: 250px !important;
+        text-align: center !important;
+        padding: 16px 20px !important;
+        font-size: 14px !important;
     }
 }
 
@@ -639,6 +701,7 @@
     line-height: 1.15;
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Added for better readability */
 }
 
 .description-new {
