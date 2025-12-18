@@ -627,7 +627,23 @@ if ($('.testimonial-carousel-rtl').length) {
                 items:1
             }
         }
-    });    		
+    });
+}
+
+if ($('.testimonial-full-carousel').length) {
+    $('.testimonial-full-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        dots: true,
+        nav: false,
+        rtl: true,
+        smartSpeed: 1000,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        items: 1,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut'
+    });
 }
 
 

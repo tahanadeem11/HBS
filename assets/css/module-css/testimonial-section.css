@@ -135,3 +135,28 @@
     font-weight: 800;
     text-transform: capitalize;
 }
+
+/* Full Width Carousel Styles */
+.testimonial-full-item {
+    position: relative;
+    display: block;
+}
+
+.testimonial-full-carousel .owl-dots {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.testimonial-full-carousel .owl-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.2) !important;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.testimonial-full-carousel .owl-dot.active {
+    background: #bf202f !important; /* Theme Red */
+}
