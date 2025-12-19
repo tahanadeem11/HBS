@@ -3257,6 +3257,60 @@ select:focus {
 	width: 100%;
 	height: 550px;
 }
+.home-map-outer .map-canvas iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.map-link-overlay{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	z-index: 10;
+}
+.map-link-button{
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	background: #bf202f;
+	color: #ffffff;
+	padding: 12px 24px;
+	border-radius: 50px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 600;
+	box-shadow: 0 4px 15px rgba(191, 32, 47, 0.4);
+	transition: all 0.3s ease;
+}
+.map-link-button:hover{
+	background: #a01a27;
+	color: #ffffff;
+	text-decoration: none;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(191, 32, 47, 0.5);
+}
+.map-link-button .flaticon-pin-1{
+	font-size: 18px;
+}
+.map-link-button .text{
+	line-height: 1;
+}
+@media (max-width: 767px){
+	.map-link-overlay{
+		bottom: 15px;
+		right: 15px;
+		left: 15px;
+	}
+	.map-link-button{
+		width: 100%;
+		justify-content: center;
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+}
 
 
 
