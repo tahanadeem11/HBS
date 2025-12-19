@@ -11,7 +11,7 @@ const headerHTML = `
             <button class="mobile-nav-toggler" type="button">
                 <span class="fa fa-bars"></span>
             </button>
-            <a href="tel:9253397692" class="mobile-cta">GET A FREE QUOTE</a>
+            <a href="tel:9255239723" class="mobile-cta">GET A FREE QUOTE</a>
         </div>
     </div>
 </header>
@@ -29,6 +29,20 @@ const headerHTML = `
             <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Area</a>
+                    <ul>
+                        <li><a href="verona.html">Verona, CA</a></li>
+                        <li><a href="dublin.html">Dublin, CA</a></li>
+                        <li><a href="san-ramon.html">San Ramon, CA</a></li>
+                        <li><a href="sunol.html">Sunol, CA</a></li>
+                        <li><a href="scotts-corner.html">Scotts Corner, Sunol, CA</a></li>
+                        <li><a href="kimber-gomes.html">Kimber-Gomes, Fremont, CA</a></li>
+                        <li><a href="norris-canyon.html">Norris Canyon, CA</a></li>
+                        <li><a href="hayward-highland.html">Hayward Highland, Hayward, CA</a></li>
+                        <li><a href="livermore.html">Livermore, CA</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="services.html">Services</a>
                     <ul>
@@ -114,6 +128,20 @@ const headerHTML = `
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li class="argo-dropdown">
+                        <a href="#">Area</a>
+                        <ul>
+                            <li><a href="verona.html">Verona, CA</a></li>
+                            <li><a href="dublin.html">Dublin, CA</a></li>
+                            <li><a href="san-ramon.html">San Ramon, CA</a></li>
+                            <li><a href="sunol.html">Sunol, CA</a></li>
+                            <li><a href="scotts-corner.html">Scotts Corner, Sunol, CA</a></li>
+                            <li><a href="kimber-gomes.html">Kimber-Gomes, Fremont, CA</a></li>
+                            <li><a href="norris-canyon.html">Norris Canyon, CA</a></li>
+                            <li><a href="hayward-highland.html">Hayward Highland, Hayward, CA</a></li>
+                            <li><a href="livermore.html">Livermore, CA</a></li>
+                        </ul>
+                    </li>
+                    <li class="argo-dropdown">
                         <a href="services.html">Services</a>
                         <ul>
                             <li><a href="services.html">View All Services</a></li>
@@ -129,7 +157,7 @@ const headerHTML = `
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <a href="tel:9253397692" class="argo-cta">Get a free quote</a>
+            <a href="tel:9255239723" class="argo-cta">Get a free quote</a>
         </div>
     </div>
 </header>
