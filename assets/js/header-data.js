@@ -62,7 +62,7 @@ const headerHTML = `
         <div class="contact-info">
             <h4>Contact Info</h4>
             <ul>
-                <li><span class="fa fa-phone"></span> <a href="tel:9253397692">(925) 339-7692</a></li>
+                <li><span class="fa fa-phone"></span> <a href="tel:+19255239723">(925)-523-9723</a></li>
                 <li><span class="fa fa-envelope"></span> <a href="mailto:sohny@homebysohny.com">sohny@homebysohny.com</a></li>
             </ul>
         </div>
@@ -107,7 +107,7 @@ const headerHTML = `
                     <div class="argo-info-icon"><span class="flaticon-telephone"></span></div>
                     <div>
                         <strong>Office Number</strong>
-                        <span><a href="tel:9253397692">(925) 339-7692</a></span>
+                        <span><a href="tel:+19255239723">925-523-9723</a></span>
                     </div>
                 </div>
                 <div class="argo-info-item">
