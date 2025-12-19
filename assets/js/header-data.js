@@ -67,10 +67,9 @@ const headerHTML = `
                 </div>
                 <div class="argo-top-right">
                     <ul class="argo-social-links">
-                        <li><a href="https://g.page/r/CRbEq0-2rMybEBM/" target="_blank"><i class="fa fa-google"></i></a></li>
-                        <li><a href="https://www.facebook.com/people/FAN-Chimney-Service-Masonry/61566160057515/?_rdr" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.pinterest.com/fanchimneyservicess/_profile" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="https://www.reddit.com/user/fanchimney/" target="_blank"><i class="fa fa-reddit"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Home-By-Sohny-LLC/61585006493260/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.pinterest.com/homebysohnyllc/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="https://g.page/r/CTvPuSXI_XYcEBM/" target="_blank"><i class="fa fa-google"></i></a></li>
                     </ul>
                 </div>
             </div>

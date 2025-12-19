@@ -211,16 +211,24 @@
 <!--Start Home map area-->
 <section class="home-map-area">
     <div class="home-map-outer">
-        <!--Map Canvas-->
-        <div class="map-canvas"
-            data-zoom="12"
-            data-lat="-37.817085"
-            data-lng="144.955631"
-            data-type="roadmap"
-            data-hue="#ffc400"
-            data-title="Envato"
-            data-icon-path="assets/images/resources/map-marker.png"
-            data-content="Melbourne VIC 3000, Australia<br><a href='mailto:sohny@homebysohny.com'>sohny@homebysohny.com</a>">
+        <!--Google Maps Embed-->
+        <div class="map-canvas">
+            <iframe 
+                src="https://www.google.com/maps?q=Pleasantone+Area,+California&output=embed" 
+                width="100%" 
+                height="550" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <!--Google Maps Link Overlay-->
+        <div class="map-link-overlay">
+            <a href="https://g.page/r/CTvPuSXI_XYcEBM/" target="_blank" class="map-link-button">
+                <span class="flaticon-pin-1"></span>
+                <span class="text">View on Google Maps</span>
+            </a>
         </div>
     </div>
 </section>  
@@ -248,7 +256,7 @@
                         <p>Ready to transform your property? Schedule a consultation with Home By Sohny for professional home staging services in Pleasanton CA. Our expert team will help maximize your property's appeal and value.</p>
                     </div>
                     <div class="buttom-box">
-                        <a class="btn-one" href="#"><span class="txt">Get a Free Estimate</span></a>
+                        <a class="btn-one" href="contact.html"><span class="txt">Get a Free Estimate</span></a>
                     </div>
                 </div>    
             </div>
@@ -356,16 +364,13 @@
                             <div class="header-social-link pull-left" style="margin-top: 20px;">
                                 <ul>
                                     <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                                        <a href="https://www.facebook.com/people/Home-By-Sohny-LLC/61585006493260/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+                                        <a href="https://www.pinterest.com/homebysohnyllc/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
                                     </li>
                                     <li>
-                                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a> 
+                                        <a href="https://g.page/r/CTvPuSXI_XYcEBM/" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a> 
                                     </li>
                                 </ul>
                             </div>
@@ -416,7 +421,6 @@
 <script src="assets/js/jquery.mixitup.min.js"></script>
 <script src="assets/js/jquery.paroller.min.js"></script>
 <script src="assets/js/jquery.polyglot.language.switcher.js"></script>
-<script src="assets/js/map-script.js"></script>
 <script src="assets/js/nouislider.js"></script>
 <script src="assets/js/owl.js"></script>
 <script src="assets/js/timePicker.js"></script>   
@@ -433,10 +437,6 @@
 <script src="assets/js/jquery.tinyscrollbar.js"></script>
 <script src="assets/js/jQuery.style.switcher.min.js"></script>
 
-<script src="assets/js/map-script.js"></script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&callback=initMap">
-</script>
 
 <!-- thm custom script -->
 <script src="assets/js/header-data.js"></script>
