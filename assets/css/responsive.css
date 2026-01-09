@@ -10,12 +10,6 @@
 
 /* Large Layout: 1200px. */
 @media only screen and (min-width: 1200px){
-
-
-    
-
- 
-    
 }
 
 
@@ -63,7 +57,7 @@
     margin-bottom: 11px;
 }    
     
-/*** Interior Design Area Css ***/ 
+/*** interior decor Area Css ***/ 
 .material-tab-content .text-box {
     padding-top: 10px;
 }    
@@ -353,7 +347,7 @@
     padding: 0 0 120px;
 }    
     
-/*** Interior Design Area Css ***/ 
+/*** interior decor Area Css ***/ 
 .material-tab-content .text-box {
     padding-top: 10px;
 }    
@@ -786,7 +780,7 @@
     padding: 0 0 120px;
 }    
  
-/*** Interior Design Area Css ***/ 
+/*** interior decor Area Css ***/ 
 .interior-design-tab .tab-button-column .tab-buttons li {
     margin-right: 10px;
     margin-bottom: 10px;
