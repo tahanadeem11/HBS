@@ -47,11 +47,11 @@ const headerHTML = `
                     <a href="services.html">Services</a>
                     <ul>
                         <li><a href="services.html">View All Services</a></li>
-                        <li><a href="ser-vacant-home-staging.html">Vacant Home Staging</a></li>
-                        <li><a href="ser-occupied-home-staging.html">Occupied Home Staging</a></li>
-                        <li><a href="ser-partial-home-staging.html">Partial Home Staging</a></li>
-                        <li><a href="ser-full-home-staging.html">Full Home Staging</a></li>
-                        <li><a href="ser-home-staging-consultation.html">Home Staging Consultation</a></li>
+                        <li><a href="vacant-home-staging.html">Vacant Home Staging</a></li>
+                        <li><a href="occupied-home-staging.html">Occupied Home Staging</a></li>
+                        <li><a href="partial-home-staging.html">Partial Home Staging</a></li>
+                        <li><a href="full-home-staging.html">Full Home Staging</a></li>
+                        <li><a href="home-staging-consultation.html">Home Staging Consultation</a></li>
                     </ul>
                 </li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -77,7 +77,7 @@ const headerHTML = `
         <div class="argo-container">
             <div class="argo-top-inner">
                 <div class="argo-top-left">
-                    Mon–Sun : 7:30 AM – 9:00 PM
+                    Mon–Sun : 8:00 AM – 8:00 PM
                 </div>
                 <div class="argo-top-right">
                     <ul class="argo-social-links">
@@ -100,13 +100,13 @@ const headerHTML = `
                     <div class="argo-info-icon"><span class="flaticon-pin-1"></span></div>
                     <div>
                         <strong>We Serve</strong>
-                        <span>Pleasantone Area</span>
+                        <span>Greater Bay Area</span>
                     </div>
                 </div>
                 <div class="argo-info-item">
                     <div class="argo-info-icon"><span class="flaticon-telephone"></span></div>
                     <div>
-                        <strong>Office Number</strong>
+                        <strong>Phone Number</strong>
                         <span><a href="tel:+19255239723">925-523-9723</a></span>
                     </div>
                 </div>
@@ -145,11 +145,11 @@ const headerHTML = `
                         <a href="services.html">Services</a>
                         <ul>
                             <li><a href="services.html">View All Services</a></li>
-                            <li><a href="ser-vacant-home-staging.html">Vacant Home Staging</a></li>
-                            <li><a href="ser-occupied-home-staging.html">Occupied Home Staging</a></li>
-                            <li><a href="ser-partial-home-staging.html">Partial Home Staging</a></li>
-                            <li><a href="ser-full-home-staging.html">Full Home Staging</a></li>
-                            <li><a href="ser-home-staging-consultation.html">Home Staging Consultation</a></li>
+                            <li><a href="vacant-home-staging.html">Vacant Home Staging</a></li>
+                            <li><a href="occupied-home-staging.html">Occupied Home Staging</a></li>
+                            <li><a href="partial-home-staging.html">Partial Home Staging</a></li>
+                            <li><a href="full-home-staging.html">Full Home Staging</a></li>
+                            <li><a href="home-staging-consultation.html">Home Staging Consultation</a></li>
                         </ul>
                     </li>
                     <li><a href="gallery.html">Gallery</a></li>

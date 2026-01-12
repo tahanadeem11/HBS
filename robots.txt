@@ -8,24 +8,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /cgi-bin/
-Disallow: /*.php$
-Disallow: /*.json$
-
-# Allow important assets
-Allow: /assets/
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.ico$
-Allow: /*.webp$
 
 # Sitemap location
 Sitemap: https://www.homebysohny.com/sitemap.xml
-
-# Crawl-delay (optional - adjust if needed)
-# Crawl-delay: 1
-

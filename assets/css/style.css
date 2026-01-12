@@ -2359,6 +2359,7 @@ select:focus {
     display: inline-block;
     float: left;
     margin-right: 10px;
+    margin-bottom: 15px;
     background: #ffffff;
     color: #333029;
     font-size: 16px;
