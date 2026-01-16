@@ -4,15 +4,25 @@ require_once('phpmailer/class.phpmailer.php');
 require_once('phpmailer/class.smtp.php');
 
 $mail = new PHPMailer();
+$autoresponder = new PHPMailer();
 
 //$mail->SMTPDebug = 3; // Enable verbose debug output
 $mail->isSMTP(); // Set mailer to use SMTP
-$mail->Host = 'steelthemes.com'; // Specify main and backup SMTP servers
+$mail->Host = 'homebysohny.com'; // Specify main and backup SMTP servers
 $mail->SMTPAuth = true; // Enable SMTP authentication
-$mail->Username = 'cform@steelthemes.com'; // SMTP username
-$mail->Password = 'AsDf12**'; // SMTP password
-$mail->SMTPSecure = true; // Enable TLS encryption, `ssl` also accepted
+$mail->Username = 'contact@homebysohny.com'; // SMTP username
+$mail->Password = 'PASScode123@#'; // SMTP password
+$mail->SMTPSecure = 'ssl'; // Enable SSL encryption
 $mail->Port = 465; // TCP port to connect to
+
+// Configure auto-responder with same SMTP settings
+$autoresponder->isSMTP();
+$autoresponder->Host = 'homebysohny.com';
+$autoresponder->SMTPAuth = true;
+$autoresponder->Username = 'contact@homebysohny.com';
+$autoresponder->Password = 'PASScode123@#';
+$autoresponder->SMTPSecure = 'ssl';
+$autoresponder->Port = 465;
 
 $message = "";
 $status = "false";
@@ -30,8 +40,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $botcheck = $_POST['form_botcheck'];
 
- $toemail = 'templatecform@gmail.com'; // Your Email Address
- $toname = 'template_path'; // Your Name
+ $toemail = 'contact@homebysohny.com'; // Your Email Address
+ $toname = 'Home By Sohny'; // Your Name
 
  if( $botcheck == '' ) {
 
@@ -39,6 +49,11 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $mail->AddReplyTo( $email , $name );
  $mail->AddAddress( $toemail , $toname );
  $mail->Subject = $subject;
+
+ $autoresponder->SetFrom( $toemail , $toname );
+ $autoresponder->AddReplyTo( $toemail , $toname );
+ $autoresponder->AddAddress( $email , $name );
+ $autoresponder->Subject = 'Thank you for contacting Home By Sohny';
 
  $name = isset($name) ? "Name: $name<br><br>" : '';
  $email = isset($email) ? "Email: $email<br><br>" : '';
@@ -49,10 +64,14 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $body = "$name $email $phone $message $referrer";
 
+ $ar_body = "Thank you for contacting Home By Sohny. We have received your message and will get back to you as soon as possible.<br><br>Regards,<br>Home By Sohny";
+
  $mail->MsgHTML( $body );
+ $autoresponder->MsgHTML( $ar_body );
  $sendEmail = $mail->Send();
 
  if( $sendEmail == true ):
+ $send_arEmail = $autoresponder->Send();
  $message = 'We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.';
  $status = "true";
  else:

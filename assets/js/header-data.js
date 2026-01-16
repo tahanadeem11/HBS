@@ -84,7 +84,7 @@ const headerHTML = `
                         <li><a href="https://www.facebook.com/people/Home-By-Sohny-LLC/61585006493260/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://instagram.com/homebysohny" target="_blank"><i class="fa fa-instagram"></i></a></li>
                         <li><a href="https://www.pinterest.com/homebysohnyllc/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="https://www.yelp.com/biz/home-by-sohny-pleasantone" target="_blank"><i class="fa fa-yelp"></i></a></li>
+                        <li><a href="https://www.yelp.com/biz/home-by-sohny-pleasanton" target="_blank"><i class="fa fa-yelp"></i></a></li>
                         <li><a href="https://g.page/r/CTvPuSXI_XYcEBM/" target="_blank"><i class="fa fa-google"></i></a></li>
                     </ul>
                 </div>

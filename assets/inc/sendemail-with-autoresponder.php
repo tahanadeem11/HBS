@@ -8,12 +8,21 @@ $autoresponder = new PHPMailer();
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'just55.justhost.com';  // Specify main and backup SMTP servers
+$mail->Host = 'homebysohny.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'themeforest@ismail-hossain.me';                 // SMTP username
-$mail->Password = 'AsDf12**';                           // SMTP password
-$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Username = 'contact@homebysohny.com';                 // SMTP username
+$mail->Password = 'PASScode123@#';                           // SMTP password
+$mail->SMTPSecure = 'ssl';                            // Enable SSL encryption
 $mail->Port = 465;                                    // TCP port to connect to
+
+// Configure auto-responder with same SMTP settings
+$autoresponder->isSMTP();
+$autoresponder->Host = 'homebysohny.com';
+$autoresponder->SMTPAuth = true;
+$autoresponder->Username = 'contact@homebysohny.com';
+$autoresponder->Password = 'PASScode123@#';
+$autoresponder->SMTPSecure = 'ssl';
+$autoresponder->Port = 465;
 
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
@@ -30,8 +39,8 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 		$botcheck = $_POST['contact-form-botcheck'];
 
-        $toemail = 'spam.thememascot@gmail.com'; // Your Email Address
-        $toname = 'ThemeMascot'; // Your Name
+        $toemail = 'contact@homebysohny.com'; // Your Email Address
+        $toname = 'Home By Sohny'; // Your Name
 
 		if( $botcheck == '' ) {
 
@@ -43,9 +52,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 			$autoresponder->SetFrom( $toemail , $toname );
 			$autoresponder->AddReplyTo( $toemail , $toname );
 			$autoresponder->AddAddress( $email , $name );
-			$autoresponder->Subject = 'We\'ve received your Email';
-
-			$ar_body = "Thank you for contacting us. We will reply within 24 hours.<br><br>Regards,<br>Your Company.";
+			$autoresponder->Subject = 'Thank you for contacting Home By Sohny';
 
 			$name = isset($name) ? "Name: $name<br><br>" : '';
 			$email = isset($email) ? "Email: $email<br><br>" : '';
@@ -56,7 +63,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 			$body = "$name $email $phone $message $referrer";
 
-			$ar_body = "Thank you for contacting us. We will reply within 24 hours.<br><br>Regards,<br>Your Company.";
+			$ar_body = "Thank you for contacting Home By Sohny. We have received your message and will get back to you as soon as possible.<br><br>Regards,<br>Home By Sohny";
 
 			$autoresponder->MsgHTML( $ar_body );
 			$mail->MsgHTML( $body );
