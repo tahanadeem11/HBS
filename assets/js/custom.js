@@ -1117,11 +1117,20 @@ if($("#contact-form").length){
           $(form).ajaxSubmit({
             dataType:  'json',
             success: function(data) {
-              if( data.status = 'true' ) {
+              if( data.status === 'true' ) {
                 $(form).find('.form-control').val('');
+                $(form_result_div).removeClass('alert-danger').addClass('alert-success');
+              } else {
+                $(form_result_div).removeClass('alert-success').addClass('alert-danger');
               }
               form_btn.prop('disabled', false).html(form_btn_old_msg);
               $(form_result_div).html(data.message).fadeIn('slow');
+              setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+            },
+            error: function(xhr, status, error) {
+              form_btn.prop('disabled', false).html(form_btn_old_msg);
+              $(form_result_div).removeClass('alert-success').addClass('alert-danger');
+              $(form_result_div).html('An error occurred while sending your message. Please try again later.').fadeIn('slow');
               setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
             }
           });
