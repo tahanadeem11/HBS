@@ -32,15 +32,20 @@ const headerHTML = `
                 <li class="dropdown">
                     <a href="#">Area</a>
                     <ul>
-                        <li><a href="verona.html">Verona, CA</a></li>
-                        <li><a href="dublin.html">Dublin, CA</a></li>
-                        <li><a href="san-ramon.html">San Ramon, CA</a></li>
-                        <li><a href="sunol.html">Sunol, CA</a></li>
-                        <li><a href="scotts-corner.html">Scotts Corner, Sunol, CA</a></li>
-                        <li><a href="kimber-gomes.html">Kimber-Gomes, Fremont, CA</a></li>
-                        <li><a href="norris-canyon.html">Norris Canyon, CA</a></li>
-                        <li><a href="hayward-highland.html">Hayward Highland, Hayward, CA</a></li>
-                        <li><a href="livermore.html">Livermore, CA</a></li>
+                        <li><a href="arroyo-hondo-circle-tracy.html">Arroyo Hondo Circle, Tracy</a></li>
+                        <li><a href="cedar-street-san-carlos.html">Cedar Street, San Carlos</a></li>
+                        <li><a href="channing-way-burlingame.html">Channing Way, Burlingame</a></li>
+                        <li><a href="clinton-park-street-san-francisco.html">Clinton Park Street, San Francisco</a></li>
+                        <li><a href="crespi-dr-san-leandro.html">Crespi Dr, San Leandro</a></li>
+                        <li><a href="glenbrook-lane-hayward.html">Glenbrook Lane, Hayward</a></li>
+                        <li><a href="maywood-dr-pleasanton.html">Maywood Dr, Pleasanton</a></li>
+                        <li><a href="michigan-ave-oakland.html">Michigan Ave, Oakland</a></li>
+                        <li><a href="montecito-ct-walnut-creek.html">Montecito Ct, Walnut Creek</a></li>
+                        <li><a href="persimmon-dr-dublin.html">Persimmon Dr, Dublin</a></li>
+                        <li><a href="princeton-way-livermore.html">Princeton Way, Livermore</a></li>
+                        <li><a href="ridgeland-circle-danville.html">Ridgeland Circle, Danville</a></li>
+                        <li><a href="shoreview-ave-san-mateo.html">Shoreview Ave, San Mateo</a></li>
+                        <li><a href="wicklow-rd-south-sf.html">Wicklow Rd, South SF</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -132,15 +137,20 @@ const headerHTML = `
                     <li class="argo-dropdown">
                         <a href="#">Area</a>
                         <ul>
-                            <li><a href="verona.html">Verona, CA</a></li>
-                            <li><a href="dublin.html">Dublin, CA</a></li>
-                            <li><a href="san-ramon.html">San Ramon, CA</a></li>
-                            <li><a href="sunol.html">Sunol, CA</a></li>
-                            <li><a href="scotts-corner.html">Scotts Corner, Sunol, CA</a></li>
-                            <li><a href="kimber-gomes.html">Kimber-Gomes, Fremont, CA</a></li>
-                            <li><a href="norris-canyon.html">Norris Canyon, CA</a></li>
-                            <li><a href="hayward-highland.html">Hayward Highland, Hayward, CA</a></li>
-                            <li><a href="livermore.html">Livermore, CA</a></li>
+                            <li><a href="arroyo-hondo-circle-tracy.html">Arroyo Hondo Circle, Tracy</a></li>
+                            <li><a href="cedar-street-san-carlos.html">Cedar Street, San Carlos</a></li>
+                            <li><a href="channing-way-burlingame.html">Channing Way, Burlingame</a></li>
+                            <li><a href="clinton-park-street-san-francisco.html">Clinton Park Street, San Francisco</a></li>
+                            <li><a href="crespi-dr-san-leandro.html">Crespi Dr, San Leandro</a></li>
+                            <li><a href="glenbrook-lane-hayward.html">Glenbrook Lane, Hayward</a></li>
+                            <li><a href="maywood-dr-pleasanton.html">Maywood Dr, Pleasanton</a></li>
+                            <li><a href="michigan-ave-oakland.html">Michigan Ave, Oakland</a></li>
+                            <li><a href="montecito-ct-walnut-creek.html">Montecito Ct, Walnut Creek</a></li>
+                            <li><a href="persimmon-dr-dublin.html">Persimmon Dr, Dublin</a></li>
+                            <li><a href="princeton-way-livermore.html">Princeton Way, Livermore</a></li>
+                            <li><a href="ridgeland-circle-danville.html">Ridgeland Circle, Danville</a></li>
+                            <li><a href="shoreview-ave-san-mateo.html">Shoreview Ave, San Mateo</a></li>
+                            <li><a href="wicklow-rd-south-sf.html">Wicklow Rd, South SF</a></li>
                         </ul>
                     </li>
                     <li class="argo-dropdown">
