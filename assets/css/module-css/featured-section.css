@@ -13,10 +13,13 @@
 .featured-style1-area .row {
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    /* Ensure all columns in a row have equal height */
 }
 
 .featured-style1-area .row>[class*='col-'] {
     display: flex;
+    flex-direction: column;
 }
 
 .single-featured-style1 {
@@ -27,6 +30,7 @@
     z-index: 1;
     width: 100%;
     height: 100%;
+    /* Take full height of column */
 }
 
 .single-featured-style1 .img-holder {
@@ -35,10 +39,13 @@
     flex-direction: column;
     overflow: hidden;
     border-radius: 7px;
-    height: 400px;
+    height: 450px;
+    /* Increased height for better boxing effect */
     width: 100%;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    background: #000;
+    background: #f7f7f7;
+    /* Light background for boxed look */
+    border: 1px solid #eee;
 }
 
 /* Red Overlay on Hover */

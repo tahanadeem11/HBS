@@ -1,10 +1,9 @@
-
 /*** 
 =============================================
     Service style1 Area Css
 =============================================
 ***/
-.service-style1-area{
+.service-style1-area {
     position: relative;
     display: block;
     overflow: hidden;
@@ -12,7 +11,8 @@
     padding: 120px 0 90px;
     z-index: 1;
 }
-.service-style1-area .top-gray-bg{
+
+.service-style1-area .top-gray-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,47 +21,63 @@
     background: #f6f2eb;
     z-index: -1;
 }
+
 .service-style1-area .sec-title {
     padding-bottom: 78px;
 }
-.service-style1-area.pdbottom120{
+
+.service-style1-area.pdbottom120 {
     padding-bottom: 120px;
 }
 
-.single-service-style1{
+.single-service-style1 {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: #ffffff;
     border: 1px solid #ebe5db;
     padding: 0 19px 0;
     border-radius: 8px;
     margin-bottom: 30px;
+    height: 100%;
+    /* Ensure card takes full height of parent col */
 }
-.single-service-style1:hover{
-    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07); 
+
+.single-service-style1:hover {
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
     transition: all 100ms linear;
     transition-delay: 0.1s;
 }
+
 .single-service-style1 .img-holder {
     position: relative;
     display: block;
     overflow: hidden;
     margin-top: -20px;
 }
-.single-service-style1 .img-holder .inner{
+
+.single-service-style1 .img-holder .inner {
     position: relative;
     display: block;
     overflow: hidden;
     border-radius: 8px;
+    height: 250px;
+    /* Standardize image box height */
 }
-.single-service-style1 .img-holder img{
+
+.single-service-style1 .img-holder img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Box the image properly */
     transform: scale(1.01);
     transition: all 700ms ease;
 }
-.single-service-style1:hover .img-holder img{
-    transform: scale(1.2);    
+
+.single-service-style1:hover .img-holder img {
+    transform: scale(1.2);
 }
+
 .single-service-style1 .img-holder::before {
     position: absolute;
     top: 50%;
@@ -77,43 +93,55 @@
     opacity: 0;
     z-index: 10;
 }
+
 .single-service-style1:hover .img-holder::before {
     -webkit-animation: circle .75s;
     animation: circle .75s;
 }
 
 
-.single-service-style1 .text-holder{
+.single-service-style1 .text-holder {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allow content area to grow */
     padding: 23px 20px 0;
 }
-.single-service-style1 .text-holder .inner-text{
+
+.single-service-style1 .text-holder .inner-text {
     position: relative;
     display: block;
     overflow: hidden;
 }
-.single-service-style1 .text-holder h3{
+
+.single-service-style1 .text-holder h3 {
     font-size: 24px;
     line-height: 34px;
     font-weight: 700;
     margin: 0 0 18px;
 }
-.single-service-style1 .text-holder h3 a{
+
+.single-service-style1 .text-holder h3 a {
     color: #333029;
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
-.single-service-style1 .text-holder p{
+
+.single-service-style1 .text-holder p {
     line-height: 30px;
-    margin: 0;   
+    margin: 0;
 }
+
 .single-service-style1 .text-holder .readmore-button {
     position: relative;
     display: block;
     padding-top: 31px;
+    margin-top: auto;
+    /* Push button to bottom */
     margin-bottom: -45px;
 }
+
 .single-service-style1 .text-holder .readmore-button a {
     position: relative;
     display: block;
@@ -131,7 +159,8 @@
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
-.single-service-style1 .text-holder .readmore-button a:hover{
+
+.single-service-style1 .text-holder .readmore-button a:hover {
     color: #ffffff;
 }
 
@@ -141,7 +170,7 @@
     Service style2 Area Css
 =============================================
 ***/
-.service-style1-bg{
+.service-style1-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -152,7 +181,8 @@
     background-position: center top;
     background-repeat: no-repeat;
 }
-.service-style1-bg:before{
+
+.service-style1-bg:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -162,30 +192,33 @@
     opacity: .90;
     content: "";
 }
+
 .single-service-style1.style1instyle2 {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 .single-service-style1.style1instyle2 .text-holder h3 a {
     color: #ffffff;
 }
-.single-service-style1.style1instyle2 .text-holder p{
+
+.single-service-style1.style1instyle2 .text-holder p {
     color: #a4a097;
 }
+
 .single-service-style1.style1instyle2 .text-holder .readmore-button a {
     background: rgba(255, 255, 255, 0.10);
 }
 
 
 
-.service-style1-area.element-page{}
+.service-style1-area.element-page {}
+
 .service-style1-area.element-page .owl-carousel.owl-dot-style1 .owl-dots {
     margin-top: 0px !important;
 }
+
 .service-style1-area.element-page .owl-carousel.owl-dot-style1 .owl-stage-outer {
     padding-top: 20px;
     padding-bottom: 30px;
 }
-
-
-
