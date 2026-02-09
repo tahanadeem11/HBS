@@ -48,6 +48,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $mail->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
  $mail->AddReplyTo( $email , $name );
  $mail->AddAddress( $toemail , $toname );
+ $mail->AddAddress( 'thomas@dmworxllc.com' , 'Thomas' );
  $mail->Subject = $subject;
 
  $autoresponder->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
@@ -160,7 +161,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                         <td style="padding: 40px 30px;">
                             <p style="color: #333333; font-size: 18px; line-height: 1.6; margin: 0 0 20px 0; font-weight: bold;">Hello ' . $name_display . ',</p>
                             
-                            <p style="color: #555555; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">Thank you for reaching out to <strong style="color: #bf202f;">Home By Sohny</strong>! We have successfully received your message and are excited to help you with your home staging and interior decor needs.</p>
+                            <p style="color: #555555; font-size: 16px; line-height: 1.8; margin: 0 0 20px 0;">Thank you for reaching out to <strong style="color: #bf202f;">Home By Sohny</strong>! We have Successfully Received Your Message and are Excited to Help You with Your Home Staging and Interior Decor Needs.</p>
                             
                             <div style="background-color: #f9f9f9; border-left: 4px solid #bf202f; padding: 20px; margin: 25px 0;">
                                 <p style="color: #333333; font-size: 15px; line-height: 1.8; margin: 0;"><strong>What happens next?</strong></p>
@@ -224,7 +225,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $sendEmail = $mail->Send();
 
  if( $sendEmail == true ):
- $message = 'We have <strong>successfully</strong> received your Message and will get Back to you as soon as possible.';
+ $message = 'Your <strong>Message</strong> Has Been Received Successfully. We Will Get Back to You as Soon as Possible.';
  $status = "true";
  else:
  $message = 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
