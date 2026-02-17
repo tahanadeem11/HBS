@@ -107,7 +107,7 @@ const headerHTML = `
                     <div class="argo-info-icon"><span class="flaticon-pin-1"></span></div>
                     <div>
                         <strong>We Serve</strong>
-                        <span>Tri Valley &Greater Bay Area</span>
+                        <span>Tri Valley & Greater Bay Area</span>
                     </div>
                 </div>
                 <div class="argo-info-item">

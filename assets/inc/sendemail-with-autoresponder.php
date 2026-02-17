@@ -188,7 +188,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                                 <tr>
                                     <td style="padding: 8px 0;">
                                         <strong style="color: #bf202f; font-size: 14px;">Address:</strong>
-                                        <span style="color: #333333; font-size: 14px; margin-left: 10px;">Ste 205 Pleasanton, CA 94566</span>
+                                        <span style="color: #333333; font-size: 14px; margin-left: 10px;">the Bay Area</span>
                                     </td>
                                 </tr>
                             </table>
@@ -203,7 +203,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                         <td style="background-color: #f9f9f9; padding: 25px 30px; text-align: center; border-top: 1px solid #eeeeee;">
                             <p style="color: #888888; font-size: 13px; margin: 0 0 10px 0;"><strong style="color: #bf202f;">Home By Sohny</strong></p>
                             <p style="color: #888888; font-size: 12px; margin: 0 0 5px 0;">Professional Home Staging & Interior Decor Services</p>
-                            <p style="color: #888888; font-size: 12px; margin: 0;">Serving Ste 205 Pleasanton, CA 94566</p>
+                            <p style="color: #888888; font-size: 12px; margin: 0;">Serving the Bay Area</p>
                         </td>
                     </tr>
                 </table>
