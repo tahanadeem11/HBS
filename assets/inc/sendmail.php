@@ -8,12 +8,14 @@ $autoresponder = new PHPMailer();
 
 //$mail->SMTPDebug = 3; // Enable verbose debug output
 $mail->isSMTP(); // Set mailer to use SMTP
-$mail->Host = 'homebysohny.com'; // Specify main and backup SMTP servers
-$mail->SMTPAuth = true; // Enable SMTP authentication
-$mail->Username = 'contact@homebysohny.com'; // SMTP username
-$mail->Password = 'PASScode123@#'; // SMTP password
-$mail->SMTPSecure = 'ssl'; // Enable SSL encryption
-$mail->Port = 465; // TCP port to connect to
+// Using cPanel mail (contact@) for SMTP. contact@ receives here; sohny@ is on Google Workspace.
+// For sohny@ to receive: in cPanel create Forwarder sohny@homebysohny.com -> sohny@homebysohny.com (relays to MX/Google).
+$mail->Host = 'homebysohny.com'; // cPanel mail server
+$mail->SMTPAuth = true;
+$mail->Username = 'contact@homebysohny.com'; // cPanel mailbox (SMTP auth)
+$mail->Password = 'PASScode123@#'; // cPanel mail password
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
 
 // Configure auto-responder with same SMTP settings
 $autoresponder->isSMTP();
@@ -47,8 +49,6 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $mail->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
  $mail->AddReplyTo( $email , $name );
- $mail->AddAddress( $toemail , $toname );
- $mail->AddAddress( 'sohny@homebysohny.com' , 'sohny' );
  $mail->Subject = $subject;
 
  $autoresponder->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
@@ -217,19 +217,24 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $mail->MsgHTML( $body );
  $autoresponder->MsgHTML( $ar_body );
- 
+
  // Always send email to the user who filled the form
  $send_arEmail = $autoresponder->Send();
- 
- // Send email to business
+
+ // Send admin email to contact@ (primary - must succeed for form to succeed)
+ $mail->AddAddress( $toemail , $toname );
  $sendEmail = $mail->Send();
 
  if( $sendEmail == true ):
- $message = 'Your <strong>Message</strong> has been received successfully. We will get back to you as soon as possible.';
- $status = "true";
+     // Also send to sohny@ (if that mailbox exists). Failure here does not fail the form.
+     $mail->clearAddresses();
+     $mail->AddAddress( 'sohny@homebysohny.com' , 'Sohny' );
+     $mail->Send(); // ignore result so form still works if sohny@ does not exist
+     $message = 'Your <strong>Message</strong> has been received successfully. We will get back to you as soon as possible.';
+     $status = "true";
  else:
- $message = 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
- $status = "false";
+     $message = 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
+     $status = "false";
  endif;
  } else {
  $message = 'Bot <strong>Detected</strong>.! Clean yourself Botster.!';

@@ -364,8 +364,25 @@ function cartTouchSpin() {
 // ===Project===
 function projectMasonaryLayout() {
     if ($('.masonary-layout').length) {
-        $('.masonary-layout').isotope({
+        var $masonry = $('.masonary-layout');
+        $masonry.isotope({
             layoutMode: 'masonry'
+        });
+        // Re-layout when lazy-loaded images finish loading (fixes glitching/right column)
+        var layoutTimeout;
+        function debouncedLayout() {
+            clearTimeout(layoutTimeout);
+            layoutTimeout = setTimeout(function() {
+                $masonry.isotope('layout');
+            }, 120);
+        }
+        $masonry.find('img').each(function() {
+            var img = this;
+            if (img.complete) {
+                debouncedLayout();
+            } else {
+                $(img).on('load', debouncedLayout).on('error', debouncedLayout);
+            }
         });
     }
     if ($('.post-filter').length) {
