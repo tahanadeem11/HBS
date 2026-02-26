@@ -1,51 +1,59 @@
-
 /*** 
 =============================================
     About Style1 Area Css
 =============================================
 ***/
-.about-style1-area{
+.about-style1-area {
     position: relative;
     display: block;
     background: #ffffff;
-    padding-top: 120px;
+    padding-top: 50px;
     padding-bottom: 120px;
 }
-.about-style1-area .shape1{
+
+.about-style1-area .shape1 {
     position: absolute;
     top: 200px;
     left: 0;
     z-index: 2;
 }
-.about-style1-area .shape2{
+
+.about-style1-area .shape2 {
     position: absolute;
     left: 0;
     bottom: -300px;
     z-index: 1;
 }
+
 .about-style1-content-box {
     position: relative;
     display: block;
     z-index: 2;
 }
+
 .about-style1-content-box .sec-title {
     padding-bottom: 38px;
 }
-.about-style1-content-box .inner-content{
+
+.about-style1-content-box .inner-content {
     position: relative;
     display: block;
 }
+
 .about-style1-content-box .inner-content .text {
     position: relative;
     display: block;
     margin-bottom: 35px;
 }
-.about-style1-content-box .inner-content .text p{}
+
+.about-style1-content-box .inner-content .text p {}
+
 .about-style1-content-box .inner-content ul {
     overflow: hidden;
     margin-bottom: 35px;
 }
-.about-style1-content-box .inner-content ul li{
+
+.about-style1-content-box .inner-content ul li {
     position: relative;
     display: block;
     color: #333029;
@@ -54,46 +62,55 @@
     font-weight: 600;
     margin-bottom: 8px;
 }
-.about-style1-content-box .inner-content ul li:last-child{
+
+.about-style1-content-box .inner-content ul li:last-child {
     margin-bottom: 0;
 }
-.about-style1-content-box .inner-content ul li span{
+
+.about-style1-content-box .inner-content ul li span {
     font-size: 18px;
     font-weight: 700;
     padding-right: 10px;
 }
+
 .about-style1-content-box .inner-content .bottom-box {
     position: relative;
     display: block;
 }
-.about-style1-content-box .inner-content .bottom-box .icon{
+
+.about-style1-content-box .inner-content .bottom-box .icon {
     width: 60px;
 }
+
 .about-style1-content-box .inner-content .bottom-box .icon span {
     position: relative;
     top: 7px;
     color: #333029;
     font-size: 60px;
 }
+
 .about-style1-content-box .inner-content .bottom-box .icon,
-.about-style1-content-box .inner-content .bottom-box .title{
+.about-style1-content-box .inner-content .bottom-box .title {
     display: table-cell;
     vertical-align: middle;
 }
+
 .about-style1-content-box .inner-content .bottom-box .title {
     padding-left: 20px;
 }
-.about-style1-content-box .inner-content .bottom-box .title h3{
+
+.about-style1-content-box .inner-content .bottom-box .title h3 {
     font-size: 24px;
     line-height: 34px;
     font-weight: 800
 }
 
-.about-style1-image-box{
+.about-style1-image-box {
     position: relative;
     display: block;
 }
-.about-style1-image-box .shape3{
+
+.about-style1-image-box .shape3 {
     position: absolute;
     bottom: 80px;
     right: -80px;
@@ -102,13 +119,16 @@
     -o-animation: service_hexagon_2 15s infinite linear;
     animation: service_hexagon_2 15s infinite linear;
 }
-.about-style1-image-box .main-image{
+
+.about-style1-image-box .main-image {
     position: relative;
     display: block;
 }
-.about-style1-image-box .main-image img{
+
+.about-style1-image-box .main-image img {
     width: 100%;
 }
+
 .about-style1-image-box .main-image .icon-box {
     position: absolute;
     top: 20px;
@@ -121,6 +141,7 @@
     text-align: center;
     padding: 29px 0;
 }
+
 .about-style1-image-box .main-image .icon-box:before {
     position: absolute;
     bottom: 2px;
@@ -130,11 +151,13 @@
     font-size: 30px;
     transform: rotate(-40deg);
 }
-.about-style1-image-box .main-image .icon-box span{
+
+.about-style1-image-box .main-image .icon-box span {
     color: #ffffff;
     font-size: 60px;
 }
-.about-style1-image-box .main-image .icon-box h3{
+
+.about-style1-image-box .main-image .icon-box h3 {
     color: #ffffff;
     font-size: 20px;
     line-height: 20px;
@@ -148,30 +171,35 @@
     About Style2 Area Css
 =============================================
 ***/
-.about-style2-area{
+.about-style2-area {
     position: relative;
     display: block;
     background: #ffffff;
     padding: 120px 0 120px;
 }
-.about-style2-area .shape{
+
+.about-style2-area .shape {
     position: absolute;
     left: 0;
     bottom: -100px;
     z-index: 10;
 }
-.about-style2-image-box{
+
+.about-style2-image-box {
     position: relative;
     display: block;
     z-index: 10;
 }
-.about-style2-image-box .main-image{
+
+.about-style2-image-box .main-image {
     position: relative;
     display: block;
 }
-.about-style2-image-box .main-image img{
+
+.about-style2-image-box .main-image img {
     width: 100%;
 }
+
 .about-style2-image-box .main-image .icon-box {
     position: absolute;
     top: 50px;
@@ -182,7 +210,8 @@
     text-align: center;
     padding: 29px 0;
 }
-.about-style2-image-box .main-image .icon-box:before{
+
+.about-style2-image-box .main-image .icon-box:before {
     position: absolute;
     bottom: 2px;
     right: 20px;
@@ -191,11 +220,13 @@
     font-size: 30px;
     transform: rotate(-40deg);
 }
-.about-style2-image-box .main-image .icon-box span{
+
+.about-style2-image-box .main-image .icon-box span {
     color: #ffffff;
     font-size: 60px;
 }
-.about-style2-image-box .main-image .icon-box h3{
+
+.about-style2-image-box .main-image .icon-box h3 {
     color: #ffffff;
     font-size: 20px;
     line-height: 20px;
@@ -209,13 +240,16 @@
     padding-left: 70px;
     z-index: 11;
 }
-.about-style2-content-box .sec-title{
+
+.about-style2-content-box .sec-title {
     padding-bottom: 38px;
 }
-.about-style2-content-box .inner-content{
+
+.about-style2-content-box .inner-content {
     position: relative;
     display: block;
 }
+
 .about-style2-content-box .inner-content .title {
     position: relative;
     display: block;
@@ -223,18 +257,21 @@
     border-radius: 5px;
     padding: 16px 40px 18px;
 }
-.about-style2-content-box .inner-content .title h3{
+
+.about-style2-content-box .inner-content .title h3 {
     font-size: 20px;
     line-height: 30px;
     font-weight: 800;
 }
+
 .about-style2-content-box .inner-content .text {
     position: relative;
     display: block;
     margin-top: 38px;
     margin-bottom: 38px;
 }
-.about-style2-content-box .inner-content .text p{
+
+.about-style2-content-box .inner-content .text p {
     color: #84827d;
     font-size: 18px;
     line-height: 36px;
@@ -242,52 +279,55 @@
 }
 
 
-.about-style2-content-box .bottom-text{
+.about-style2-content-box .bottom-text {
     position: relative;
     display: block;
     border-bottom: 1px solid #ebe5db;
 }
+
 .about-style2-content-box .bottom-text .single-box {
     position: relative;
     display: block;
     padding-bottom: 22px;
 }
-.about-style2-content-box .bottom-text .single-box h3{
+
+.about-style2-content-box .bottom-text .single-box h3 {
     color: #333029;
     font-size: 18px;
     line-height: 34px;
     font-weight: 700;
 }
-.about-style2-content-box .bottom-text .single-box h3 span{
+
+.about-style2-content-box .bottom-text .single-box h3 span {
     font-size: 18px;
     font-weight: 700;
     padding-right: 10px;
 }
-.about-style2-content-box .bottom-text .single-box p{
+
+.about-style2-content-box .bottom-text .single-box p {
     color: #84827d;
     font-size: 16px;
     line-height: 34px;
     font-weight: 500;
 }
 
-.about-style2-phone-number{
+.about-style2-phone-number {
     position: relative;
     display: block;
     padding-top: 31px;
 }
+
 .about-style2-phone-number h3 {
     color: #333029;
     font-size: 20px;
     line-height: 30px;
     font-weight: 600;
 }
-.about-style2-phone-number h3 a{
+
+.about-style2-phone-number h3 a {
     position: relative;
     display: inline-block;
     padding-left: 5px;
     font-size: 30px;
     font-weight: 800;
 }
-
-
-

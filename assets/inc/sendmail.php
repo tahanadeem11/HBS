@@ -48,7 +48,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $mail->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
  $mail->AddReplyTo( $email , $name );
  $mail->AddAddress( $toemail , $toname );
- $mail->AddAddress( 'thomas@dmworxllc.com' , 'Thomas' );
+ $mail->AddAddress( 'sohny@homebysohny.com' , 'sohny' );
  $mail->Subject = $subject;
 
  $autoresponder->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
@@ -225,7 +225,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $sendEmail = $mail->Send();
 
  if( $sendEmail == true ):
- $message = 'Your <strong>Message</strong> Has Been Received Successfully. We Will Get Back to You as Soon as Possible.';
+ $message = 'Your <strong>Message</strong> has been received successfully. We will get back to you as soon as possible.';
  $status = "true";
  else:
  $message = 'Email <strong>could not</strong> be sent due to some Unexpected Error. Please Try Again later.<br /><br /><strong>Reason:</strong><br />' . $mail->ErrorInfo . '';
