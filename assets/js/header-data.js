@@ -52,7 +52,7 @@ const headerHTML = `
                     <a href="services.html">Services</a>
                     <ul>
                         <li><a href="services.html">View All Services</a></li>
-                        <li><a href="vacant-home-staging.html">Vacant Home Staging</a></li>
+                        <li><a href="vacant-home-staging.html">Luxury Home Staging</a></li>
                         <li><a href="occupied-home-staging.html">Occupied Home Staging</a></li>
                         <li><a href="partial-home-staging.html">Partial Home Staging</a></li>
                         <li><a href="full-home-staging.html">Full Home Staging</a></li>
@@ -157,7 +157,7 @@ const headerHTML = `
                         <a href="services.html">Services</a>
                         <ul>
                             <li><a href="services.html">View All Services</a></li>
-                            <li><a href="vacant-home-staging.html">Vacant Home Staging</a></li>
+                            <li><a href="vacant-home-staging.html">Luxury Home Staging</a></li>
                             <li><a href="occupied-home-staging.html">Occupied Home Staging</a></li>
                             <li><a href="partial-home-staging.html">Partial Home Staging</a></li>
                             <li><a href="full-home-staging.html">Full Home Staging</a></li>

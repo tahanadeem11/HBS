@@ -6,11 +6,11 @@ require_once('phpmailer/class.smtp.php');
 $mail = new PHPMailer();
 $autoresponder = new PHPMailer();
 
-//$mail->SMTPDebug = 3; // Enable verbose debug output
-$mail->isSMTP(); // Set mailer to use SMTP
-// Using cPanel mail (contact@) for SMTP. contact@ receives here; sohny@ is on Google Workspace.
-// For sohny@ to receive: in cPanel create Forwarder sohny@homebysohny.com -> sohny@homebysohny.com (relays to MX/Google).
-$mail->Host = 'homebysohny.com'; // cPanel mail server
+// Send from contact@ (cPanel) to sohny@ — one email with full form details. No extra SMTP; sohny@ is only the recipient.
+// If sohny@ is on Google Workspace: in cPanel create Forwarder sohny@homebysohny.com -> sohny@homebysohny.com so it relays to Google.
+//$mail->SMTPDebug = 3;
+$mail->isSMTP();
+$mail->Host = 'homebysohny.com';
 $mail->SMTPAuth = true;
 $mail->Username = 'contact@homebysohny.com'; // cPanel mailbox (SMTP auth)
 $mail->Password = 'PASScode123@#'; // cPanel mail password
@@ -42,13 +42,12 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
  $botcheck = $_POST['form_botcheck'];
 
- $toemail = 'contact@homebysohny.com'; // Your Email Address
- $toname = 'Home By Sohny'; // Your Name
-
  if( $botcheck == '' ) {
 
+ // Send from contact@ (cPanel SMTP) to sohny@ with full form details in the body
  $mail->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
  $mail->AddReplyTo( $email , $name );
+ $mail->AddAddress( 'sohny@homebysohny.com' , 'Sohny' );
  $mail->Subject = $subject;
 
  $autoresponder->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
@@ -218,18 +217,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  $mail->MsgHTML( $body );
  $autoresponder->MsgHTML( $ar_body );
 
- // Always send email to the user who filled the form
+ // Thank-you email to the person who filled the form (from contact@)
  $send_arEmail = $autoresponder->Send();
 
- // Send admin email to contact@ (primary - must succeed for form to succeed)
- $mail->AddAddress( $toemail , $toname );
+ // One email from contact@ to sohny@ with all form information in the body
  $sendEmail = $mail->Send();
 
  if( $sendEmail == true ):
-     // Also send to sohny@ (if that mailbox exists). Failure here does not fail the form.
-     $mail->clearAddresses();
-     $mail->AddAddress( 'sohny@homebysohny.com' , 'Sohny' );
-     $mail->Send(); // ignore result so form still works if sohny@ does not exist
      $message = 'Your <strong>Message</strong> has been received successfully. We will get back to you as soon as possible.';
      $status = "true";
  else:

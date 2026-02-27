@@ -62,10 +62,17 @@
 }
 .project-gallery-masonry {
     margin: 0 -10px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .masonry-item {
     padding: 0 10px 20px;
+    display: block;
+}
+
+.project-gallery-masonry .masonry-item {
+    float: none;
 }
 
 .single-project-style1 .img-holder {
@@ -86,12 +93,13 @@
 }
 
 .single-project-style1 .img-holder img {
-    position: relative; /* Change to relative for natural sizing */
+    position: relative;
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
-    object-fit: contain; /* Show original proportions */
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .single-project-style1 .overlay-content {

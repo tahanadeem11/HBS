@@ -75,6 +75,16 @@
         padding: 0px 0 90px;
     }
 
+    .project-gallery-masonry {
+        width: 100%;
+        margin: 0 -10px;
+    }
+
+    .project-gallery-masonry .masonry-item {
+        width: auto;
+        max-width: none;
+    }
+
     .project-style1-content {
         position: relative;
         display: block;

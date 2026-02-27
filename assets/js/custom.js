@@ -366,15 +366,15 @@ function projectMasonaryLayout() {
     if ($('.masonary-layout').length) {
         var $masonry = $('.masonary-layout');
         $masonry.isotope({
+            itemSelector: '.masonry-item',
             layoutMode: 'masonry'
         });
-        // Re-layout when lazy-loaded images finish loading (fixes glitching/right column)
         var layoutTimeout;
         function debouncedLayout() {
             clearTimeout(layoutTimeout);
             layoutTimeout = setTimeout(function() {
                 $masonry.isotope('layout');
-            }, 120);
+            }, 150);
         }
         $masonry.find('img').each(function() {
             var img = this;
@@ -383,6 +383,13 @@ function projectMasonaryLayout() {
             } else {
                 $(img).on('load', debouncedLayout).on('error', debouncedLayout);
             }
+        });
+        var resizeTimeout;
+        $(window).on('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                $masonry.isotope('layout');
+            }, 180);
         });
     }
     if ($('.post-filter').length) {
