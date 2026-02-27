@@ -12,7 +12,7 @@ $autoresponder = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = 'homebysohny.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'contact@homebysohny.com'; // cPanel mailbox (SMTP auth)
+$mail->Username = 'sohny@homebysohny.com'; // cPanel mailbox (SMTP auth)
 $mail->Password = 'PASScode123@#'; // cPanel mail password
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
@@ -21,7 +21,7 @@ $mail->Port = 465;
 $autoresponder->isSMTP();
 $autoresponder->Host = 'homebysohny.com';
 $autoresponder->SMTPAuth = true;
-$autoresponder->Username = 'contact@homebysohny.com';
+$autoresponder->Username = 'sohny@homebysohny.com';
 $autoresponder->Password = 'PASScode123@#';
 $autoresponder->SMTPSecure = 'ssl';
 $autoresponder->Port = 465;
@@ -45,13 +45,13 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
  if( $botcheck == '' ) {
 
  // Send from contact@ (cPanel SMTP) to sohny@ with full form details in the body
- $mail->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
+ $mail->SetFrom( 'sohny@homebysohny.com' , 'Home By Sohny' );
  $mail->AddReplyTo( $email , $name );
  $mail->AddAddress( 'sohny@homebysohny.com' , 'Sohny' );
  $mail->Subject = $subject;
 
- $autoresponder->SetFrom( 'contact@homebysohny.com' , 'Home By Sohny' );
- $autoresponder->AddReplyTo( 'contact@homebysohny.com' , 'Home By Sohny' );
+ $autoresponder->SetFrom( 'sohny@homebysohny.com' , 'Home By Sohny' );
+ $autoresponder->AddReplyTo( 'sohny@homebysohny.com' , 'Home By Sohny' );
  $autoresponder->AddAddress( $email , $name );
  $autoresponder->Subject = 'Thank you for contacting Home By Sohny';
 
@@ -183,7 +183,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                                 <tr>
                                     <td style="padding: 8px 0;">
                                         <strong style="color: #bf202f; font-size: 14px;">Email:</strong>
-                                        <span style="color: #333333; font-size: 14px; margin-left: 10px;"><a href="mailto:contact@homebysohny.com" style="color: #bf202f; text-decoration: none;">contact@homebysohny.com</a></span>
+                                        <span style="color: #333333; font-size: 14px; margin-left: 10px;"><a href="mailto:sohny@homebysohny.com" style="color: #bf202f; text-decoration: none;">sohny@homebysohny.com</a></span>
                                     </td>
                                 </tr>
                                 <tr>
