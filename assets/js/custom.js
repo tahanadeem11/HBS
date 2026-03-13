@@ -306,12 +306,6 @@ function timepicker () {
 
 
 
-// ===Prealoder===
-function prealoader() {
-    if($('.preloader').length){
-        $('.preloader').delay(200).fadeOut(500);
-    }
-}
 
 
 
@@ -1203,18 +1197,12 @@ jQuery(window).on('scroll', function(){
 });
 
 
-
 // Instance Of Fuction while Window Load event
 jQuery(window).on('load', function() {
     (function($) {
-        prealoader ();
         projectMasonaryLayout ();
-   
-
-        
     })(jQuery);
 });
-
 
 
 $(window).enllax();

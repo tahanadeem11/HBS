@@ -858,23 +858,6 @@ li {
 
 
 
-/*________________Preloader_______________ */
-.preloader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 999999999999999999;
-    background-color: #ffffff;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url(../images/icon/preloader.gif);
-}
-
-.preloader.style-two {
-    background-image: url(../images/icon/preloader-1.gif);
-}
 
 
 
