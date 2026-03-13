@@ -4,7 +4,7 @@ require_once('phpmailer/class.phpmailer.php');
 require_once('phpmailer/class.smtp.php');
 
 // --- MASTER SMTP CONFIGURATION ---
-$smtp_host = 'homebysohny.com'; 
+$smtp_host = 'mail.homebysohny.com'; 
 $smtp_user = 'contact@homebysohny.com'; 
 $smtp_pass = 'PASScode123@#';
 $notification_recipients = [
@@ -51,7 +51,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             $mail->Timeout = 40; // Increased timeout
 
             // Set From and Recipients
-            $mail->SetFrom( $smtp_user , 'Home By Sohny' );
+            $mail->From = $smtp_user;
+            $mail->FromName = 'Home By Sohny';
+            $mail->Sender = $smtp_user; // Critical for some servers
             $mail->AddReplyTo( $email , $name );
             foreach($notification_recipients as $addr => $receiver) {
                 $mail->AddAddress( $addr , $receiver );
@@ -69,7 +71,9 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
             $autoresponder->SMTPSecure = 'ssl';
             $autoresponder->Port = 465;
             
-            $autoresponder->SetFrom( $smtp_user , 'Home By Sohny' );
+            $autoresponder->From = $smtp_user;
+            $autoresponder->FromName = 'Home By Sohny';
+            $autoresponder->Sender = $smtp_user; // Sets the Return-Path
             $autoresponder->AddReplyTo( $smtp_user , 'Home By Sohny' );
             $autoresponder->AddAddress( $email , $name );
             $autoresponder->Subject = 'Thank you for contacting Home By Sohny';
