@@ -904,6 +904,8 @@
 
 .hero-image-gallery img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
     display: block;
@@ -912,22 +914,31 @@
 .hero-image-clip-1 {
     position: relative;
     z-index: 3;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
 }
 
 .hero-image-clip-2 {
     position: absolute;
     width: 220px;
+    aspect-ratio: 1 / 1;
     bottom: -60px;
     right: -40px;
     z-index: 4;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .hero-image-clip-3 {
     position: absolute;
     width: 180px;
+    aspect-ratio: 1 / 1;
     top: -40px;
     left: -50px;
     z-index: 2;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
 .price-tag-overlay {
