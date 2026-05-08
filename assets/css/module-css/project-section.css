@@ -79,10 +79,9 @@
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px; /* Slightly more rounded for premium feel */
     width: 100%;
-    height: auto;
-    padding-bottom: 0; /* Remove fixed aspect ratio for natural size */
+    aspect-ratio: 1 / 1; /* Force square aspect ratio for perfect alignment */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.4s ease;
 }
@@ -93,14 +92,14 @@
 }
 
 .single-project-style1 .img-holder img {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    border-radius: 8px;
-    object-fit: cover;
-    vertical-align: middle;
-    transition: transform 0.6s ease; /* Smooth zoom transition */
+    object-fit: cover; /* Fill the square container without distortion */
+    transition: transform 0.6s ease;
 }
 
 .single-project-style1:hover .img-holder img {

@@ -1281,3 +1281,32 @@ jQuery(window).on('load', function() {
         $(this).next('ul').slideToggle(500);
     });
 })(jQuery);
+
+// See More Projects Functionality
+(function($) {
+    $(document).ready(function () {
+        $('#see-more-projects').on('click', function (e) {
+            e.preventDefault();
+            var $hiddenItems = $('.masonry-item.hidden-project-item');
+            
+            // Reveal items
+            $hiddenItems.removeClass('hidden-project-item');
+            
+            // Add animation class
+            $hiddenItems.find('.single-project-style1').addClass('animated fadeInUp');
+            
+            // Hide button container row
+            $(this).closest('.row').fadeOut(300, function() {
+                $(this).remove();
+            });
+            
+            // Refresh Isotope layout
+            setTimeout(function() {
+                if ($('.masonary-layout').length) {
+                    $('.masonary-layout').isotope('layout');
+                }
+            }, 200);
+        });
+    });
+})(jQuery);
+
