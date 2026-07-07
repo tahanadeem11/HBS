@@ -45,6 +45,14 @@
     <![endif]-->
 
     <style>
+        /* Fix horizontal scroll - only on body, NOT html (html overflow breaks appear.js scroll detection) */
+        body {
+            overflow-x: hidden !important;
+        }
+        .boxed_wrapper {
+            overflow-x: hidden !important;
+        }
+
         .hidden-project-item {
             display: none !important;
         }
@@ -76,6 +84,52 @@
             position: relative;
             z-index: 2;
         }
+
+        /* About image box override */
+        .about-style1-image-box .main-image img.about-main-img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .about-style1-image-box .main-image .icon-box {
+            top: 20px;
+            left: auto;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 15px;
+            background: #d71e30 !important;
+            box-shadow: 0 8px 30px rgba(215, 30, 48, 0.45);
+            border: 3px solid rgba(255,255,255,0.3);
+        }
+        .about-style1-image-box .main-image .icon-box img.logo-badge {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 8px;
+            /* Make the logo white so it's visible on red background */
+            filter: brightness(0) invert(1);
+        }
+        .about-style1-image-box .main-image .icon-box h3 {
+            color: #ffffff !important;
+            font-size: 14px !important;
+            line-height: 20px !important;
+            font-weight: 800 !important;
+            text-align: center;
+            margin: 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .about-style1-image-box .main-image .icon-box:before {
+            display: none;
+        }
+        .about-style1-image-box .main-image .icon-box span {
+            display: none;
+        }
     </style>
 </head>
 
@@ -99,7 +153,7 @@
                     <!-- Slide 1: Vacant Staging - Tri Valley -->
                     <div class="slide">
                         <div class="image-layer"
-                            style="background-image:url('assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0004.jpg')">
+                            style="background-image:url('assets/images/updated07/1000639321.jpg')">
                         </div>
                         <!-- Decorative Background Elements -->
                         <div class="hero-decorative-elements">
@@ -133,15 +187,15 @@
                                 <!-- Right Image Gallery (40%) -->
                                 <div class="hero-image-gallery" id="hero-image-gallery">
                                     <div class="hero-image-clip-1">
-                                        <img src="assets/images/updated/2nd%20updated%20images/IMG-20260313-WA0009.jpg"
+                                        <img src="assets/images/updated07/1000639302.jpg"
                                             alt="Staged Home 1">
                                     </div>
                                     <div class="hero-image-clip-2">
-                                        <img loading="lazy" src="assets/images/updated/IMG_1971.jpeg"
+                                        <img loading="lazy" src="assets/images/updated07/1000639305.jpg"
                                             alt="Staged Home 2">
                                     </div>
                                     <div class="hero-image-clip-3">
-                                        <img loading="lazy" src="assets/images/updated/IMG_1972.jpeg"
+                                        <img loading="lazy" src="assets/images/updated07/1000639308.jpg"
                                             alt="Staged Home 3">
                                     </div>
                                     <div class="price-tag-overlay">
@@ -155,7 +209,7 @@
                     <!-- Slide 2: Vacant Staging - the Bay Area -->
                     <div class="slide">
                         <div class="image-layer"
-                            style="background-image:url('assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0005.jpg')">
+                            style="background-image:url('assets/images/updated07/1000639322.jpg')">
                         </div>
                         <!-- Decorative Background Elements -->
                         <div class="hero-decorative-elements">
@@ -191,15 +245,15 @@
                                 <div class="hero-image-gallery" id="hero-image-gallery-1b">
                                     <div class="hero-image-clip-1">
                                         <img loading="lazy"
-                                            src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0003.jpg"
+                                            src="assets/images/updated07/1000639310.jpg"
                                             alt="Staged Home 4">
                                     </div>
                                     <div class="hero-image-clip-2">
-                                        <img loading="lazy" src="assets/images/updated/IMG_1948.jpeg"
+                                        <img loading="lazy" src="assets/images/updated07/1000639312.jpg"
                                             alt="Staged Home 5">
                                     </div>
                                     <div class="hero-image-clip-3">
-                                        <img loading="lazy" src="assets/images/updated/IMG_1950.jpeg"
+                                        <img loading="lazy" src="assets/images/updated07/1000639314.jpg"
                                             alt="Staged Home 6">
                                     </div>
                                     <div class="price-tag-overlay">
@@ -420,7 +474,7 @@
                                             alt="Property Value 5">
                                     </div>
                                     <div class="hero-image-clip-3">
-                                        <img loading="lazy" src="assets/images/updated/IMG_1972.jpeg"
+                                        <img loading="lazy" src="assets/images/updated07/1000639308.jpg"
                                             alt="Property Value 6">
                                     </div>
                                     <div class="price-tag-overlay">
@@ -519,9 +573,9 @@
                                 <img loading="lazy" src="assets/images/shape/shape-3.png" alt="">
                             </div>
                             <div class="main-image">
-                                <img loading="lazy" src="assets/images/about/about-1.png" alt="Awesome Image">
-                                <div class="icon-box thm-bgclr paroller-2">
-                                    <span class="flaticon-wallpaper"></span>
+                                <img loading="lazy" class="about-main-img" src="assets/images/updated07/1000639295.jpg" alt="Home By Sohny Interior">
+                                <div class="icon-box paroller-2">
+                                    <img class="logo-badge" src="assets/images/Home By Soni Updated (2).png" alt="Home By Sohny Logo">
                                     <h3>Founded<br> in 2023</h3>
                                 </div>
                             </div>
@@ -559,7 +613,7 @@
                         <div class="single-featured-style1 wow fadeInUp" data-wow-delay="200ms"
                             data-wow-duration="1500ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/IMG_1948.jpeg" alt="Interior Decor">
+                                <img loading="lazy" src="assets/images/updated07/1000639312.jpg" alt="Interior Decor">
                                 <div class="title">
                                     <h3><a href="services.html">Luxury Home staging</a></h3>
                                     <div class="description">
@@ -576,7 +630,7 @@
                         <div class="single-featured-style1 wow fadeInUp" data-wow-delay="400ms"
                             data-wow-duration="1500ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/IMG_1950.jpeg" alt="Property Staging">
+                                <img loading="lazy" src="assets/images/updated07/1000639314.jpg" alt="Property Staging">
                                 <div class="title">
                                     <h3><a href="services.html">Partial Property Staging</a></h3>
                                     <div class="description">
@@ -766,7 +820,7 @@
                                                         class="single-project-style1 border-radius-10 overflow-hidden shadow">
                                                         <div class="img-holder">
                                                             <img loading="lazy"
-                                                                src="assets/images/updated/IMG_1972.jpeg"
+                                                                src="assets/images/updated07/1000639308.jpg"
                                                                 alt="Bay Area Home Staging">
                                                             <div class="overlay-content">
                                                                 <div class="inner">
@@ -855,12 +909,12 @@
             <div class="auto-container-box">
                 <div class="project-gallery-masonry items-container row clearfix masonary-layout">
                     <!-- Project items -->
-                    <!-- NEW IMAGES (Top 33) -->
+                    <!-- UPDATED07 IMAGES -->
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="0ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606791.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606791.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639295.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639295.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -873,8 +927,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="50ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606792.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606792.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639296.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639296.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -887,8 +941,8 @@
                     <div class="masonry-item col-xl-6 col-lg-8 col-md-12 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="100ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606793.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606793.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639297.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639297.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -901,8 +955,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="150ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606794.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606794.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639298.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639298.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -915,8 +969,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="200ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606795.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606795.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639299.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639299.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -929,8 +983,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="250ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/1000606796.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/1000606796.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639300.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639300.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -943,8 +997,8 @@
                     <div class="masonry-item col-xl-6 col-lg-8 col-md-12 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="300ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0003.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0003.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639301.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639301.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -957,8 +1011,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="350ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0004.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0004.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639302.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639302.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -971,8 +1025,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="400ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0005.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0005.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639303.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639303.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -985,8 +1039,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="450ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0006.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0006.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639304.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639304.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -999,8 +1053,8 @@
                     <div class="masonry-item col-xl-6 col-lg-8 col-md-12 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="500ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0007.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0007.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639305.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639305.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1013,8 +1067,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="550ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0008.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0008.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639306.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639306.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1027,8 +1081,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="600ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0009.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0009.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639307.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639307.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1041,8 +1095,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="650ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0010.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0010.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639308.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639308.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1055,8 +1109,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="700ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0011.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0011.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639309.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639309.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1069,8 +1123,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="750ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0012.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0012.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639310.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639310.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1083,8 +1137,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="800ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0013.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0013.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639311.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639311.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1097,8 +1151,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="850ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0014.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0014.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639312.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639312.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1111,8 +1165,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="900ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0015.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0015.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639313.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639313.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1125,8 +1179,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="950ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0016.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0016.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639314.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639314.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1140,8 +1194,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="0ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0017.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0017.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639315.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639315.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1154,8 +1208,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="50ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0018.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0018.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639316.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639316.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1168,8 +1222,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="100ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0019.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0019.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639317.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639317.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1182,8 +1236,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="150ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0020.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0020.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639318.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639318.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1196,8 +1250,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="200ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0021.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0021.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639319.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639319.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1210,8 +1264,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="250ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0022.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0022.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639320.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639320.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1224,8 +1278,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="300ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0023.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0023.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639321.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639321.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1238,8 +1292,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="350ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0024.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0024.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639322.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639322.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1252,8 +1306,8 @@
                     <div class="masonry-item col-xl-6 col-lg-8 col-md-12 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="400ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0025.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0025.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639323.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639323.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1266,8 +1320,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="450ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0026.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0026.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639324.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639324.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1280,8 +1334,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="500ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0027.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0027.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639295.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639295.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1294,8 +1348,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="550ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0028.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0028.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639296.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639296.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1308,8 +1362,8 @@
                     <div class="masonry-item col-xl-3 col-lg-4 col-md-6 col-sm-12 hidden-project-item">
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="600ms">
                             <div class="img-holder">
-                                <img loading="lazy" src="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0029.jpg" alt="Recent Project">
-                                <a href="assets/images/updated/3rd%20updated%20images/IMG-20260509-WA0029.jpg" class="img-popup overlay-content">
+                                <img loading="lazy" src="assets/images/updated07/1000639297.jpg" alt="Recent Project">
+                                <a href="assets/images/updated07/1000639297.jpg" class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
                                             <span class="flaticon-up-arrow"></span>
@@ -1394,9 +1448,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="0ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0001.jpg"
+                                    src="assets/images/updated07/1000639318.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0001.jpg"
+                                <a href="assets/images/updated07/1000639318.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1411,9 +1465,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="50ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0002.jpg"
+                                    src="assets/images/updated07/1000639319.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0002.jpg"
+                                <a href="assets/images/updated07/1000639319.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1428,9 +1482,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="100ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0003.jpg"
+                                    src="assets/images/updated07/1000639320.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0003.jpg"
+                                <a href="assets/images/updated07/1000639320.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1445,9 +1499,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="150ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0004.jpg"
+                                    src="assets/images/updated07/1000639321.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0004.jpg"
+                                <a href="assets/images/updated07/1000639321.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1462,9 +1516,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="200ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0005.jpg"
+                                    src="assets/images/updated07/1000639322.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260331-WA0005.jpg"
+                                <a href="assets/images/updated07/1000639322.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1479,9 +1533,9 @@
                         <div class="single-project-style1 wow fadeInUp" data-wow-delay="250ms">
                             <div class="img-holder">
                                 <img loading="lazy"
-                                    src="assets/images/updated/2nd%20updated%20images/IMG-20260313-WA0009.jpg"
+                                    src="assets/images/updated07/1000639323.jpg"
                                     alt="Recent Project">
-                                <a href="assets/images/updated/2nd%20updated%20images/IMG-20260313-WA0009.jpg"
+                                <a href="assets/images/updated07/1000639323.jpg"
                                     class="img-popup overlay-content">
                                     <div class="inner">
                                         <div class="readmore-button">
@@ -1549,7 +1603,7 @@
                         <div class="single-service-style1 text-center">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img loading="lazy" src="assets/images/updated/IMG_1971.jpeg"
+                                    <img loading="lazy" src="assets/images/updated07/1000639305.jpg"
                                         alt="Occupied Home Staging">
                                 </div>
                             </div>
@@ -1572,7 +1626,7 @@
                         <div class="single-service-style1 text-center">
                             <div class="img-holder">
                                 <div class="inner">
-                                    <img loading="lazy" src="assets/images/updated/IMG_1972.jpeg"
+                                    <img loading="lazy" src="assets/images/updated07/1000639308.jpg"
                                         alt="Partial Home Staging">
                                 </div>
                             </div>
@@ -1824,8 +1878,8 @@
                                     data-wow-duration="1500ms">
                                     <div class="count-box">
                                         <h2>
-                                            <span class="timer" data-from="1" data-to="129" data-speed="5000"
-                                                data-refresh-interval="50">129</span>
+                                            <span class="timer" data-from="1" data-to="255" data-speed="5000"
+                                                data-refresh-interval="50">255</span>
                                             <span class="icon">
                                                 <i class="flaticon-plus"></i>
                                             </span>
@@ -1841,25 +1895,8 @@
                                     data-wow-duration="1500ms">
                                     <div class="count-box">
                                         <h2>
-                                            <span class="timer" data-from="1" data-to="33" data-speed="5000"
-                                                data-refresh-interval="50">487</span>
-                                            <span class="icon">
-                                                <i class="flaticon-plus"></i>
-                                            </span>
-                                        </h2>
-                                        <div class="sub-title">
-                                            <h5>Active Clients</h5>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!--End Single Fact Counter-->
-                                <!--Start Single Fact Counter-->
-                                <li class="single-fact-counter wow fadeInUp text-center" data-wow-delay="500ms"
-                                    data-wow-duration="1500ms">
-                                    <div class="count-box">
-                                        <h2>
-                                            <span class="timer" data-from="1" data-to="10" data-speed="5000"
-                                                data-refresh-interval="50">620</span>
+                                            <span class="timer" data-from="1" data-to="4" data-speed="5000"
+                                                data-refresh-interval="50">4</span>
                                             <span class="icon">
                                                 <i class="flaticon-plus"></i>
                                             </span>
@@ -1871,12 +1908,12 @@
                                 </li>
                                 <!--End Single Fact Counter-->
                                 <!--Start Single Fact Counter-->
-                                <li class="single-fact-counter wow fadeInUp text-center" data-wow-delay="700ms"
+                                <li class="single-fact-counter wow fadeInUp text-center" data-wow-delay="500ms"
                                     data-wow-duration="1500ms">
                                     <div class="count-box">
                                         <h2>
-                                            <span class="timer" data-from="1" data-to="127" data-speed="5000"
-                                                data-refresh-interval="50">127</span>
+                                            <span class="timer" data-from="1" data-to="251" data-speed="5000"
+                                                data-refresh-interval="50">251</span>
                                             <span class="icon">
                                                 <i class="flaticon-plus"></i>
                                             </span>

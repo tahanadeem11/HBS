@@ -1,3 +1,17 @@
+/* ==============================================
+   Global Horizontal Scroll Fix
+   NOTE: Only apply overflow-x:hidden to BODY (not html).
+   Setting it on html breaks appear.js scroll detection
+   (appear.js reads document.documentElement.scrollTop)
+   which makes all scroll-triggered content invisible.
+   ============================================== */
+body {
+    overflow-x: hidden !important;
+}
+.boxed_wrapper {
+    overflow-x: hidden !important;
+}
+
 /* Remove Chrome Input Field's Unwanted Yellow Background Color */
 input:-webkit-autofill, 
 input:-webkit-autofill:hover, 
