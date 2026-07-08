@@ -89,8 +89,7 @@
     border-radius: 12px;
     /* Slightly more rounded for premium feel */
     width: 100%;
-    aspect-ratio: 1 / 1;
-    /* Force square aspect ratio for perfect alignment */
+    /* aspect-ratio: 1 / 1; */ /* Disabled to allow natural masonry aspect ratios */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
 }
@@ -101,14 +100,10 @@
 }
 
 .single-project-style1 .img-holder img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
-    object-fit: cover;
-    /* Fill the square container without distortion */
     transition: transform 0.6s ease;
 }
 

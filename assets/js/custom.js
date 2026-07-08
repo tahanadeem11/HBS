@@ -367,7 +367,11 @@ function projectMasonaryLayout() {
         var $masonry = $('.masonary-layout');
         $masonry.isotope({
             itemSelector: '.masonry-item',
-            layoutMode: 'masonry'
+            layoutMode: 'masonry',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.masonry-item'
+            }
         });
         var layoutTimeout;
         function debouncedLayout() {

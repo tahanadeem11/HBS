@@ -45,12 +45,14 @@
 
 .fact-counter-box{
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .single-fact-counter {
     position: relative;
     display: block;
-    float: left;
-    max-width: 25%;
+    max-width: 33.333%;
     width: 100%;
     margin-bottom: 50px;
 }
